@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+.body{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+   
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    
+}
+.logo h2{
+    color: black;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+.logo h2:hover{
+    transition: .3s;
+    color: rgb(226, 72, 72);
+}
+.navbar ul{
+    display: flex;
+}
+.navbar li{
+    padding: 7px 17px;
+}
+.navbar li a{
+    font-size: 25px;
+    color: rgb(14, 165, 114);
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-family: 'Signika', sans-serif;
+    transition: .3s;
+}
+.navbar .active,.navbar li a:hover{
+    background: #a3c8e4;
+   color:  rgb(175, 43, 142);
+   cursor: pointer;
+  
+}
+nav .menu i{
+    font-size: 22px;
+    cursor: pointer;
+    display: none;
+} 
+#click{
+    display: none;
+}
+
+@media (max-width: 940px) {
+.navbar ul{
+   position: fixed;
+   top: 80px;
+   left: -100%;
+   background: #111;
+   height: 100vh;
+   width: 100%;
+   display: block;
+   text-align: center;
+   transition: all .3s ease;
+ }
+ #click:checked ~ .navbar ul{
+    left: 0;
+ }
+ .navbar ul li {
+   margin: 40px 0;
+ }
+  .navbar .active,.navbar li a:hover {
+    color: cyan;
+    background: none;
+ }   
+ 
+}
+@media (max-width: 940px) {
+    nav .menu i{
+        display: block;
+        padding-left: 60px;
+    }
+    
+}
